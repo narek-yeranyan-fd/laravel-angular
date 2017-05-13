@@ -3,7 +3,7 @@
         <div flex="90" flex-offset="5" class="DemoHeader-container">
             <div layout="row" layout-align="space-between">
                 <img src="img/icons/laravel-text-logo.png" ui-sref="app.landing" class="DemoHeader-logo"/>
-                <div layout="row" layout-align="center stretch">
+                <div layout="row" layout-align="center stretch" ng-show="!isLoggedIn">
                     <a hide-xs class="DemoHeader-link md-subhead" href="/#!/login" target="_self">Login</a>
                     <a hide-xs class="DemoHeader-link md-subhead" href="/#!/register" target="_self">Register</a>
                 </div>

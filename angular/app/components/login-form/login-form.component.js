@@ -20,8 +20,8 @@ class LoginFormController {
 		this.$auth.login(user)
 			.then((response) => {
 				this.$auth.setToken(response.data);
-
 				this.ToastService.show('Logged in successfully.');
+				window.location.href = '/#!/upload';
 			})
 			.catch(this.failedLogin.bind(this));
 	}

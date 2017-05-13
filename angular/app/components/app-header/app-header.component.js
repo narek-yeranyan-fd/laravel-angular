@@ -1,8 +1,14 @@
 class AppHeaderController{
-    constructor($sce){
+    constructor($sce, $auth, $scope){
         'ngInject';
 
         this.$sce = $sce;
+        this.$auth = $auth;
+        var token = $auth.getToken();
+        $scope.isLoggedIn = false;
+        if(token){
+            $scope.isLoggedIn = true;
+        }
     }
 
     $onInit(){
