@@ -35,6 +35,14 @@ export function RoutesConfig($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+        .state('app.upload', {
+            url: '/upload',
+            views: {
+                'main@': {
+                    templateUrl: getView('upload')
+                }
+            }
+        })
         .state('app.login', {
 			url: '/login',
 			views: {
